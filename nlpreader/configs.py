@@ -7,7 +7,7 @@ def make_defaults():
             "h": "pw",
             "j": "wpm-",
             "k": "wpm+",
-            "r": "rst",
+            "g": "goto",
             "p": "pause",
             "q": "quit"
             }

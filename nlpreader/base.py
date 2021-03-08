@@ -47,23 +47,31 @@ class NLPReader(Thread):
             return
 
         if self.__bindings[action] == "nw":
-            self.__idx += num if self.__idx < len(self.__cols) - 1 else len(self.__cols) - 1
+            new_idx = self.__idx + num
+            self.__idx = new_idx if new_idx < len(self.__cols) - 1 else len(self.__cols) - 1
+
         elif self.__bindings[action] == "pw":
-            self.__idx -= num if self.__idx > 0 else 0
+            new_idx = self.__idx - num
+            self.__idx = new_idx if new_idx > 0 else 0
 
         elif self.__bindings[action] == "wpm+":
-            self.__wpm += 8*num if self.__wpm < 2048 else 2048
+            new_wpm = self.__wpm + 8*num
+            self.__wpm = new_wpm if new_wpm < 2048 else 2048
             self.__interval = 60 / self.__wpm
 
         elif self.__bindings[action] == "wpm-":
-            self.__wpm -= 8*num if self.__wpm > 8 else 8
+            new_wpm = self.__wpm - 8*num
+            self.__wpm = new_wpm if new_wpm > 8 else 8
             self.__interval = 60 / self.__wpm
 
         elif self.__bindings[action] == "pause":
             self.__running = not self.__running
 
-        elif self.__bindings[action] == "rst":
-            self.__idx = 0 
+        elif self.__bindings[action] == "goto":
+            new_idx = num - 1
+            if new_idx < 0 or new_idx > len(self.__cols) - 1:
+                return
+            self.__idx = num - 1
 
         elif self.__bindings[action] == "quit":
             self.stop = True
