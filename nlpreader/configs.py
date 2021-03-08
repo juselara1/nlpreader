@@ -32,7 +32,8 @@ def make_defaults():
 
     defaults = {
             "spacing": 20,
-            "wpm": 256
+            "wpm": 256,
+            "mode": "clear"
             }
 
     home = expanduser("~")
