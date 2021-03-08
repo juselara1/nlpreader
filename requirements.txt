@@ -1,0 +1,14 @@
+certifi==2020.12.5
+click==7.1.2
+greenlet==1.0.0
+joblib==1.0.1
+keyboard==0.13.5
+msgpack==1.0.2
+neovim==0.3.1
+nlpreader @ file:///home/juselara/Repositories/personal/nlpreader
+nltk==3.5
+pynvim==0.4.3
+pyperclip==1.8.2
+regex==2020.11.13
+termcolor==1.1.0
+tqdm==4.59.0
