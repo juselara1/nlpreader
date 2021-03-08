@@ -22,10 +22,10 @@ You can create an alias for `nlpreader`.
     cp main.py ~/.nlpreader
     ```
 
-2. Edit your `.bashrc` or `.zshrc`, append the following line:
+2. Edit your `.bashrc` or `.zshrc` (`nano ~/.bashrc` or `nano ~/.zshrc`), append the following line:
 
     ```sh
-    alias nlpreader="python $USER/.nlpreader/main.py"
+    alias nlpreader="python /home/$USER/.nlpreader/main.py"
     ```
 
 3. Source your rc file:
@@ -40,11 +40,16 @@ You can create an alias for `nlpreader`.
 `nlpreader` has two operation modes.
 
 1. You can copy any text, when you execute `nlpreader` without arguments, it will read your clipboard and prompt the words into the terminal.
+    
+    ![example1](https://github.com/juselara1/Resources/blob/master/nlpreader/ex2.gif?raw=true)
+
 2. You can pass a text as an argument:
 
     ```sh
     nlpreader --text "hi, this is a sample text."
     ```
+
+    ![example2](https://github.com/juselara1/Resources/blob/master/nlpreader/ex1.gif?raw=true)
 
 ## Keybindings
 
