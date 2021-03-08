@@ -62,7 +62,7 @@ The default keybindings are shown in the following table (you must press `return
 |`l`|Go to next word, can use multipliers (e.g., `2l` `3l` `10l`) to navigate through multiple words.|
 |`h`|Go to previous word, can use multipliers (e.g., `2h` `3h` `10h`) to navigate through multiple words.|
 |`j`|Decrease the words per minute (WPM) by 8 units, can use multipliers (e.g., `2j` `3j` `10j`) to modify the magnitude.|
-|`k`|Increase the words per minute (WPM) by 8 units, can use multipliers (e.g., `2j` `3j` `10j`) to modify the magnitude.| 
+|`k`|Increase the words per minute (WPM) by 8 units, can use multipliers (e.g., `2k` `3k` `10k`) to modify the magnitude.| 
 |`g`|Moves to a given word (goes to the first word by default), can use a word index (e.g., `10g` `100g` `53g`)|
 |`p`|Pauses the reading.|
 |`q`|Closes `nlpreader`.|
