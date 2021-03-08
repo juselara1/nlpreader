@@ -74,7 +74,6 @@ class NLPReader(Thread):
     def run(self):
         while not self.stop:
             cols = self.__cols[self.__idx]
-            os.system('cls' if os.name == 'nt' else 'clear')
             print(*cols, sep="", end="\r")
 
             if self.__idx >= len(self.__cols) - 1 or\

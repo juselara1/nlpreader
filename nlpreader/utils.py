@@ -14,20 +14,19 @@ def __make_colored(
         colors, defaults
         ):
     word, tag = tagged_word
-
-    color1 = colors["tags"][tag] if tag in colors else colors["color1"]
+    color1 = colors["tags"][tag] if tag in colors["tags"] else colors["color1"]
     color2 = colors["color2"]
     color3 = colors["color3"]
 
     spacing = defaults["spacing"]
     if len(word) > 3:
-        splits = [" "*(spacing), word[:2], word[2], word[3:], " "*(spacing - len(word[3:])) + f"WPM: {wpm} word: {word_idx}/{total_words}"]
+        splits = [" "*(spacing), word[:2], word[2], word[3:], " "*(spacing - len(word[3:])) + f"WPM: {wpm}\tword: {word_idx}/{total_words}"]
     elif len(word) == 1:
-        splits = [" "*(spacing + 2), "", word, "", " "*(spacing) + f"WPM: {wpm} word: {word_idx}/{total_words}"]
+        splits = [" "*(spacing + 2), "", word, "", " "*(spacing) + f"WPM: {wpm}\tword: {word_idx}/{total_words}"]
     elif len(word) == 2:
-        splits = [" "*(spacing + 1), *(i for i in word), "", " "*(spacing) + f"WPM: {wpm} word: {word_idx}/{total_words}"]
+        splits = [" "*(spacing + 1), *(i for i in word), "", " "*(spacing) + f"WPM: {wpm}\tword: {word_idx}/{total_words}"]
     elif len(word) == 3:
-        splits = [" "*(spacing + 1), *(i for i in word), " "*(spacing - 1) + f"WPM: {wpm} word: {word_idx}/{total_words}"]
+        splits = [" "*(spacing + 1), *(i for i in word), " "*(spacing - 1) + f"WPM: {wpm}\tword: {word_idx}/{total_words}"]
 
     colors = [color1, color1, color2, color1, color3]
     *splits, = map(
